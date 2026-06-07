@@ -36,21 +36,21 @@ const handleClicks = (event: MouseEvent) => {
 };
 
 const shell = (content: string) => `
-  <div class="ambient"></div>
   <main class="shell">
     <nav class="nav">
       <a class="brand" data-nav="/" href="/">
         <span class="brand-mark">&#9670;</span>
-        <span>OmniPay</span>
+        <span class="brand-word">OmniPay</span>
       </a>
+      <span></span>
       <div class="nav-actions">
         <a data-nav="/dashboard" href="/dashboard">Dashboard</a>
-        <a class="button button-small" data-nav="/create" href="/create">+ Create link</a>
+        <a class="button button-small" data-nav="/create" href="/create">+ Create</a>
       </div>
     </nav>
-    <section class="runtime-pill">${isTelegramWebApp() ? 'Telegram Mini App' : 'Web'} &middot; STON.fi Omniston v1beta8</section>
+    <div class="runtime-pill">${isTelegramWebApp() ? 'Telegram Mini App' : 'Web'} &middot; Omniston v1beta8</div>
     ${content}
-    <footer class="footer">OmniPay Links &middot; Built for STON.fi Vibe Coding Hackathon &middot; Non-custodial TON checkout</footer>
+    <footer class="footer">OmniPay Links &middot; STON.fi Vibe Coding Hackathon &middot; Non-custodial</footer>
   </main>`;
 
 const render = () => {
@@ -71,8 +71,8 @@ const landing = () => `
   <section class="hero">
     <div class="hero-copy">
       <p class="eyebrow">Telegram-native payment links for TON</p>
-      <h1>Accept any token. Settle in what you want.</h1>
-      <p class="lead">Create checkout links powered by STON.fi Omniston. Your payers choose their token &mdash; you receive exactly what you asked for.</p>
+      <h1>Accept any token.<br>Settle in <span class="hl">what you want.</span></h1>
+      <p class="lead">Create checkout links powered by <b>STON.fi Omniston</b>. Your payers choose their token &mdash; you receive exactly what you asked for.</p>
       <div class="hero-actions">
         <a class="button" data-nav="/create" href="/create">Create payment link</a>
         <a class="button secondary" data-nav="/checkout/alice-design-50-usdt" href="/checkout/alice-design-50-usdt">Try demo checkout</a>
