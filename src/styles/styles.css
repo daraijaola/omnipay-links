@@ -88,8 +88,11 @@ button, input, select, textarea { font: inherit; }
   place-items: center;
   background: var(--signal);
   color: var(--bg);
-  font-size: 14px;
-  font-weight: 800;
+}
+
+.brand-mark svg {
+  width: 18px;
+  height: 18px;
 }
 
 .brand-word {

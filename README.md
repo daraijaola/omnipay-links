@@ -1,12 +1,19 @@
 # OmniPay Links
 
+> **STON.fi Vibe Coding Hackathon — Cohort 2 Submission**
+
 **One-liner:** Accept any supported token, settle in the TON asset you want — payment links powered by STON.fi Omniston.
 
 OmniPay Links is a Telegram Mini App for creators, freelancers, DAOs, community admins, and mini-app sellers who need payment links. A merchant creates an invoice, chooses the settlement asset they want to receive (TON or USDT on TON), and shares a Telegram-native checkout link. The payer opens the link, chooses the supported asset they already hold, requests an Omniston quote, and confirms a TON wallet transaction.
 
 ## Live demo
 
-**Production URL:** https://dist-gywcctlx.devinapps.com
+| | |
+|---|---|
+| **Production URL** | https://dist-gywcctlx.devinapps.com |
+| **Telegram Bot** | [@Omnipaylink_bot](https://t.me/Omnipaylink_bot) |
+| **Track** | STON.fi (Omniston v1beta8) |
+| **AI Tools Used** | Devin (Cognition AI) |
 
 ## Hackathon alignment
 
