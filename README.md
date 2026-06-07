@@ -10,7 +10,7 @@ OmniPay Links is a Telegram Mini App for creators, freelancers, DAOs, community 
 
 | | |
 |---|---|
-| **Production URL** | https://dist-gywcctlx.devinapps.com |
+| **Production URL** | https://omnipay-links.vercel.app |
 | **Telegram Bot** | [@Omnipaylink_bot](https://t.me/Omnipaylink_bot) |
 | **Track** | STON.fi (Omniston v1beta8) |
 | **AI Tools Used** | Devin (Cognition AI) |

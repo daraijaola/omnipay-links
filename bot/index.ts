@@ -1,5 +1,5 @@
-const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '7752024849:AAH0aVroldu868_V8SyCkB7uhTZsXeloUKY';
-const APP_URL = 'https://dist-gywcctlx.devinapps.com';
+const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '';
+const APP_URL = 'https://omnipay-links.vercel.app';
 const API = `https://api.telegram.org/bot${BOT_TOKEN}`;
 
 async function sendStartMessage(chatId: number) {
