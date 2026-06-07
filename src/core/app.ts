@@ -77,7 +77,6 @@ const landing = () => `
       <p class="lead">Create checkout links powered by <b>STON.fi Omniston</b>. Your payers choose their token &mdash; you receive exactly what you asked for.</p>
       <div class="hero-actions">
         <a class="button" data-nav="/create" href="/create">Create payment link</a>
-        <a class="button secondary" data-nav="/checkout/alice-design-50-usdt" href="/checkout/alice-design-50-usdt">Try demo checkout</a>
       </div>
       <div class="trust-row">
         <span>Omniston RFQ</span>
