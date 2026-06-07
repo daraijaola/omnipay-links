@@ -1,4 +1,4 @@
-import type { Invoice, Receipt } from './types.js';
+import type { Invoice, Receipt } from './types';
 
 const invoicesKey = 'omnipay.invoices';
 const receiptsKey = 'omnipay.receipts';
@@ -40,7 +40,7 @@ export const seedDemoData = () => {
     note: 'Telegram creator checkout for a landing page audit.',
     createdAt: now.toISOString(),
     expiresAt: new Date(now.getTime() + 1000 * 60 * 60 * 24 * 3).toISOString(),
-    status: 'pending'
+    status: 'pending',
   };
   saveInvoice(demo);
 };

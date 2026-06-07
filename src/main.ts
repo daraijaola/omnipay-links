@@ -1,3 +1,4 @@
-import { startApp } from './core/app.js';
+import './styles/styles.css';
+import { startApp } from './core/app';
 
 startApp();
