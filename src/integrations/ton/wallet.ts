@@ -9,7 +9,17 @@ export interface TonConnectTransaction {
 let ui: InstanceType<typeof TonConnectUI> | undefined;
 
 export const getTonConnect = (): InstanceType<typeof TonConnectUI> | undefined => {
-  if (ui) return ui;
+  const root = document.getElementById('ton-connect-root');
+  if (ui) {
+    // Re-mount button into current root if it exists
+    if (root && !root.hasChildNodes()) {
+      try {
+        ui.uiOptions = { buttonRootId: 'ton-connect-root' };
+      } catch { /* ignore re-mount errors */ }
+    }
+    return ui;
+  }
+  if (!root) return undefined;
   try {
     ui = new TonConnectUI({
       manifestUrl: tonConnectManifestUrl(),

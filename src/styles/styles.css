@@ -121,6 +121,27 @@ button, input, select, textarea { font: inherit; }
   background: rgba(255, 255, 255, 0.04);
 }
 
+/* ---------- Back button ---------- */
+.back-btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font-size: 18px;
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
 /* ---------- Runtime pill ---------- */
 .runtime-pill {
   display: inline-flex;
@@ -650,19 +671,40 @@ select { cursor: pointer; }
   .hero, .checkout-layout { grid-template-columns: 1fr; }
   .feature-grid { grid-template-columns: 1fr 1fr; }
   .phone-frame { display: none; }
+  .checkout-layout .panel { margin-bottom: 14px; }
 }
 
 @media (max-width: 640px) {
   .shell { padding-left: 14px; padding-right: 14px; }
-  .nav { padding: 0 14px; gap: 12px; }
-  .nav-actions a:first-child { display: none; }
-  h1 { font-size: 34px; }
+  .nav { padding: 0 12px; gap: 10px; min-height: 56px; }
+  .nav-actions { gap: 6px; }
+  .nav-actions a { padding: 6px 10px; font-size: 11px; }
+  .brand-word { font-size: 15px; letter-spacing: 0.05em; }
+  h1 { font-size: 28px; letter-spacing: -0.04em; }
+  .eyebrow { font-size: 10px; margin-bottom: 12px; }
+  .lead, .muted { font-size: 14px; }
   .form, .feature-grid, .metrics { grid-template-columns: 1fr; }
-  .invoice-card { flex-direction: column; align-items: flex-start; }
-  .quote-grid, dl { grid-template-columns: 1fr; }
+  .feature { padding: 16px; }
+  .feature h3 { font-size: 13px; }
+  .feature p { font-size: 12px; }
+  .invoice-card { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .card-actions { width: 100%; }
+  .card-actions .button { flex: 1; }
+  .quote-grid, dl { grid-template-columns: 1fr; gap: 8px; }
   .quote-grid strong, dd { text-align: left; }
-  .panel { padding: 18px; }
-  .amount-due { font-size: 32px; }
+  .panel { padding: 16px; border-radius: 10px; }
+  .amount-due { font-size: 28px; margin: 14px 0; }
+  .stepper span { font-size: 10px; padding: 6px 4px; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .button { width: 100%; text-align: center; }
+  .trust-row { justify-content: center; }
+  .trust-row span { font-size: 9px; padding: 4px 8px; }
+  .runtime-pill { font-size: 10px; padding: 5px 10px; }
+  .footer { font-size: 9px; margin-top: 32px; }
+  .button.full { padding: 14px; font-size: 12px; }
+  .metrics div { padding: 14px; }
+  .metrics strong { font-size: 22px; }
+  .receipt-mark { width: 52px; height: 52px; font-size: 22px; }
 }
 
 /* ---------- Scrollbar ---------- */

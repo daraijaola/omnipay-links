@@ -18,7 +18,6 @@ export const startApp = () => {
   window.addEventListener('popstate', render);
   document.addEventListener('click', handleClicks);
   render();
-  window.setTimeout(() => getTonConnect(), 500);
 };
 
 const navigate = (path: string) => {
@@ -35,6 +34,8 @@ const handleClicks = (event: MouseEvent) => {
   navigate(link.dataset.nav || '/');
 };
 
+const showBack = () => route() !== '/';
+
 const shell = (content: string) => `
   <main class="shell">
     <nav class="nav">
@@ -44,6 +45,7 @@ const shell = (content: string) => `
       </a>
       <span></span>
       <div class="nav-actions">
+        ${showBack() ? '<button class="back-btn" id="nav-back">&larr;</button>' : ''}
         <a data-nav="/dashboard" href="/dashboard">Dashboard</a>
         <a class="button button-small" data-nav="/create" href="/create">+ Create</a>
       </div>
@@ -246,12 +248,25 @@ const bindPage = () => {
   document.querySelector('#quote-button')?.addEventListener('click', quoteFlow);
   document.querySelector('#connect-wallet')?.addEventListener('click', async () => { await connectWallet(); hapticSuccess(); });
   document.querySelector('#share-receipt')?.addEventListener('click', (event) => shareTelegramLink(location.href, (event.currentTarget as HTMLElement).dataset.shareText || 'OmniPay receipt'));
+  document.querySelector('#nav-back')?.addEventListener('click', () => { history.back(); });
   document.querySelectorAll<HTMLElement>('[data-copy]').forEach((button) => button.addEventListener('click', async () => {
     await navigator.clipboard.writeText(button.dataset.copy || '');
     const original = button.textContent;
     button.textContent = 'Copied!';
     setTimeout(() => { button.textContent = original; }, 1500);
   }));
+  // Mount TonConnect when root element exists
+  if (document.getElementById('ton-connect-root')) {
+    initTonConnect();
+  }
+};
+
+const initTonConnect = () => {
+  window.setTimeout(() => {
+    const root = document.getElementById('ton-connect-root');
+    if (!root) return;
+    getTonConnect();
+  }, 100);
 };
 
 const createInvoice = (event: Event) => {
@@ -280,7 +295,7 @@ const createInvoice = (event: Event) => {
     result.className = 'result-card';
     result.innerHTML = `
       <h3>Payment link ready</h3>
-      <p>${escapeHtml(link)}</p>
+      <p class="muted">Your checkout link has been generated. Share it with your payer.</p>
       <div class="hero-actions">
         <button class="button" data-copy="${escapeAttribute(link)}">Copy link</button>
         <button id="share-created" class="button secondary">Share in Telegram</button>
