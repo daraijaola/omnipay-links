@@ -40,7 +40,7 @@ const shell = (content: string) => `
   <main class="shell">
     <nav class="nav">
       <a class="brand" data-nav="/" href="/">
-        <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 15l5-8 5 8H7z" fill="currentColor" opacity="0.9"/><circle cx="12" cy="18" r="1.5" fill="currentColor"/></svg></span>
+        <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M10 14l2-2 2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="12" x2="12" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="9" y1="16" x2="15" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
         <span class="brand-word">OmniPay</span>
       </a>
       <span></span>
