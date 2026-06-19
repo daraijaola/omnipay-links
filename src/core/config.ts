@@ -1,15 +1,5 @@
-declare global {
-  interface Window {
-    OMNIPAY_CONFIG?: {
-      publicAppUrl?: string;
-      omnistonApiUrl?: string;
-      tonApiBaseUrl?: string;
-      telegramBotUsername?: string;
-    };
-  }
-}
-
-export const publicAppUrl = () => window.OMNIPAY_CONFIG?.publicAppUrl || window.location.origin;
-export const omnistonApiUrl = () => window.OMNIPAY_CONFIG?.omnistonApiUrl || 'https://omniston.ston.fi';
-export const tonApiBaseUrl = () => window.OMNIPAY_CONFIG?.tonApiBaseUrl || 'https://tonapi.io/v2';
-export const telegramBotUsername = () => window.OMNIPAY_CONFIG?.telegramBotUsername || '';
+export const publicAppUrl = () => import.meta.env.VITE_PUBLIC_APP_URL || window.location.origin;
+export const omnistonApiUrl = () => import.meta.env.VITE_OMNISTON_API_URL || 'https://omniston.ston.fi';
+export const tonApiBaseUrl = () => import.meta.env.VITE_TONAPI_BASE_URL || 'https://tonapi.io/v2';
+export const telegramBotUsername = () => import.meta.env.VITE_TELEGRAM_BOT_USERNAME || '';
+export const tonConnectManifestUrl = () => import.meta.env.VITE_TONCONNECT_MANIFEST_URL || `${window.location.origin}/tonconnect-manifest.json`;

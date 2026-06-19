@@ -14,15 +14,14 @@ OmniPay Links helps Telegram creators, freelancers, DAOs, community admins, and 
 
 ## AI tools used
 
-Codex / ChatGPT.
+Devin (Cognition AI) / ChatGPT.
 
 ## Integrations used
 
-- STON.fi Omniston SDK/API v1beta8 adapter.
-- TON Connect runtime path.
-- Telegram Mini App WebApp SDK.
-- TonAPI/Toncenter-ready receipt tracking placeholder.
-- Vercel static deployment.
+- STON.fi Omniston SDK/API v1beta8 adapter (quote routing & settlement).
+- TON Connect UI SDK (@tonconnect/ui) for wallet connection.
+- Telegram Mini App WebApp SDK for native Telegram experience.
+- Vite build system with TypeScript strict mode.
 
 ## Demo story
 
@@ -34,6 +33,6 @@ The next DeFi UX is not a trading terminal. It is normal user actions — pay, s
 
 ## Links
 
-- GitHub repository: `https://github.com/darajiola/omnipay-links`
-- Live product URL: `TODO: add Vercel production URL`
+- GitHub repository: `https://github.com/daraijaola/omnipay-links`
+- Live product URL: `https://dist-gywcctlx.devinapps.com`
 - Loom demo: `TODO: add Loom URL`
